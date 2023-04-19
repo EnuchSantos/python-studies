@@ -12,6 +12,7 @@ while not leave:
         number_2 = float(number_2)
     except:
         print('You not type a number!')
+        continue
 
     operator_check = True
     if operator == '+':
