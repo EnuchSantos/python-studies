@@ -4,7 +4,7 @@ result = 0
 while not leave:
 
     number_1 = input('Type a number: ')
-    operator = input('Type a operator (+ - * /): ')
+    operator = input('Type a operator (+-*/): ')
     number_2 = input('Type another number: ')
 
     try:
@@ -14,7 +14,14 @@ while not leave:
         print('You not type a number!')
         continue
 
-    operator_check = True
+    if operator not in '+-/*':
+        print('The operator is invalid!')
+        continue
+
+    if len(operator) > 1:
+        print('The more than an operator was typed')
+        continue
+
     if operator == '+':
         result = number_1 + number_2
     elif operator == '-':
@@ -24,11 +31,9 @@ while not leave:
     elif operator == '/':
         result = number_1 / number_2
     else:
-        print('The operator is invalid!')
-        operator_check = False
+        print('Aaaaaaaaaaaauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
 
-    if operator_check is True:
-        print(f'Result: {number_1} {operator} {number_2} {result}')
+    print(f'Result: {number_1} {operator} {number_2} {result}')
 
     leave = input('Desire left? [Y]es: ').lower().startswith('y')
 
