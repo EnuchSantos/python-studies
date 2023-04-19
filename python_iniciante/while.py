@@ -22,11 +22,24 @@
 #         break
 
 
-count = 0
+# count = 0
 
-while count <= 20:
-    count += 1
-    if count % 2 == 0:
-        continue
+# while count <= 20:
+#     count += 1
+#     if count % 2 == 0:
+#         continue
 
-    print(f"All numbers odd {count}")
+#     print(f"All numbers odd {count}")
+
+
+linha = 1
+qtd_linha = 5
+
+coluna = 1
+
+while linha <= qtd_linha:
+    while coluna <= qtd_linha * linha:
+        print(f'{linha=} {coluna=}')
+        coluna += 1
+
+    linha += 1
