@@ -12,3 +12,12 @@ print(text.__next__())
 print(text.__next__())
 print(text.__next__())
 print(next(text))
+
+# for
+iterador = iter('Sexo')
+while True:
+    try:
+        letter = next(iterador)
+        print(letter)
+    except StopIteration:
+        break
