@@ -13,6 +13,7 @@ secret = '*' * len(secret_word)
 key = False
 win = len(secret_word)
 count = 0
+hit_letters = ''
 while not key:
     attempt = input("Type a letter: ")
 
@@ -22,6 +23,13 @@ while not key:
 
     i = 0
     hit = False
+
+    if attempt in secret:
+        hit_letters += attempt
+
+    if attempt in hit_letters:
+        print("You already type this letter!")
+        continue
 
     for letter in secret_word:
         if attempt == letter:
