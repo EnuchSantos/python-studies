@@ -13,14 +13,13 @@ while True:
         print('Item adicionado a lista')
     elif opcao in 'aA':
         indice = input('Digite o indice da compra: ')
-        if indice.isnumeric():
-            indice = int(indice)
-
+        if not indice.isnumeric():
+            print('Não possível remover o item!')
+            continue
+        indice = int(indice)
         if len(lista) > 0 and indice <= len(lista):
             del lista[indice]
             print('Item removido')
-        else:
-            print('Não possível remover o item!')
     elif opcao in 'lL':
         for indice, item in enumerate(lista):
             print(indice, item)
