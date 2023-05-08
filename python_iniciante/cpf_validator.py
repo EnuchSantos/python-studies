@@ -2,7 +2,7 @@ import re
 
 cpf = re.sub(r'[^0-9]', '', '70166845477')  # apenas nums de 0-9
 
-CPF = '70166845477' \
+CPF = '22757576860' \
     .replace('.', '') \
     .replace('-', '') \
     .replace(' ', '')
