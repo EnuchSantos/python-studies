@@ -7,8 +7,17 @@ Por padrão def retornam none (nada)
 """
 
 
-def Print(text: str, times: int):
-    return print(text * times)
+# def Print(text: str, times: int):
+#     return print(text * times)
 
 
-Print('Enuch ', 2)
+# Print('Enuch ', 2)
+
+def soma(x: int, y: int, z=None) -> int:
+    if z is not None:
+        return f'result: {x} + {y} + {z} = {x + y + z}'
+
+    return x + y
+
+
+print(soma(x=2, y=2, z=4))
