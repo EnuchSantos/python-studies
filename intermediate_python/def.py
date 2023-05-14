@@ -7,7 +7,7 @@ Por padrão def retornam none (nada)
 """
 
 
-# def Print(text: str, times: int):
+# def Print(text, times):
 #     return print(text * times)
 
 
@@ -21,3 +21,21 @@ def soma(x: int, y: int, z=None) -> int:
 
 
 print(soma(x=2, y=2, z=4))
+
+
+x = 0
+y = 0
+print('Antes de ser alterada', x)
+print(y)
+
+
+def escopo():
+    global x  # usando o x de fora do escopo
+    x = 10
+    y = 10
+    print(y)
+
+
+escopo()
+print('Depois de ser alterada na função', x)
+print(y)
